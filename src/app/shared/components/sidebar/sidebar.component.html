@@ -6,7 +6,15 @@
 
   <div class="overflow-y-auto overflow-x-auto" id="tagHistory">
     <div class="list-group small">
-      <a *ngFor="let tag of tags" class="list-group-item list-group-item-action" href="#">{{ tag | titlecase }}</a>
+      <div *ngFor="let tag of tags; let i=index">
+        <ng-container *ngIf="i == 0; then thenTemplate; else elseTemplate"></ng-container>
+        <ng-template #thenTemplate>
+          <a class="list-group-item list-group-item-action active" (click)="search(tag)">{{ tag | titlecase }}</a>
+        </ng-template>
+        <ng-template #elseTemplate>
+          <a class="list-group-item list-group-item-action" (click)="search(tag)">{{ tag | titlecase }}</a>
+        </ng-template>
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
-<div class="card mb-4 bg-dark-subtle">
-  <img class="card-img-top" src="https://i.pinimg.com/originals/a0/02/a3/a002a3e51a2adc85d6c0a4684892e743.gif" />
-  <div class="card-body">
-    Dancing
+<div class="card shadow h-100">
+  <img class="card-img-top object-fit-cover img-fluid"
+       style="height:250px; min-height: 250px;"
+       [src]="gif.images.downsized_medium.url"
+       [alt]="gif.alt_text" />
+  <div class="card-body small text-center">
+    {{ gif.title }}
   </div>
 </div>

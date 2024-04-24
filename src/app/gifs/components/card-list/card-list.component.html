@@ -1,16 +1,7 @@
 <div class="overflow-y-auto overflow-x-auto" id="cardlist">
   <div class="row w-100">
-    <div class="col-lg-2 col-md-3 col-sm-6">
-      <gifs-card></gifs-card>
-    </div>
-    <div class="col-lg-2 col-md-3 col-sm-6">
-      <gifs-card></gifs-card>
-    </div>
-    <div class="col-lg-2 col-md-3 col-sm-6">
-      <gifs-card></gifs-card>
-    </div>
-    <div class="col-lg-2 col-md-3 col-sm-6">
-      <gifs-card></gifs-card>
+    <div *ngFor="let gif of gifs" class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <gifs-card [gif]="gif"></gifs-card>
     </div>
   </div>
 </div>
