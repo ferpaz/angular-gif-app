@@ -1,0 +1,11 @@
+<img class="object-fit-cover img-fluid animate__animated animate__fadeIn animate__slow"
+     [src]="src"
+     [alt]="alt"
+     (load)="onLoad()"
+     [ngStyle]="{'display': hasLoaded ? 'block' : 'none'}"
+/>
+
+<img *ngIf="!hasLoaded"
+     class="object-fit-cover img-fluid mt-3"
+     src="assets/loader.svg"
+     alt="cargando ..." />

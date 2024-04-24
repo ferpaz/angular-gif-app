@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SharedModule } from '../shared/shared.module';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
@@ -12,10 +13,11 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     CardComponent,
     CardListComponent,
     HomePageComponent,
-    SearchbarComponent,
+    SearchbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     HomePageComponent

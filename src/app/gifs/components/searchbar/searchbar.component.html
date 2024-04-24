@@ -1,8 +1,6 @@
-<div class="text-center bg-image rounded-3 mb-4" style="
-    background-image: url('https://www.bing.com/th?id=OHR.TrinityDublin_ZH-CN7902993255_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
-  ">
+<div class="text-center bg-image rounded-3 mb-4" style="background-image: url('assets/banner.jpg');">
   <!-- style="background-color: rgba(0, 0, 0, 0.6);" -->
-  <div class="mask rounded-3 pt-3 bg-dark bg-opacity-75">
+  <div class="mask rounded-3 pt-3 bg-dark bg-opacity-50">
     <div class="d-flex justify-content-center">
       <div class="row">
         <div class="col-12">
@@ -11,9 +9,9 @@
         <div class="col-12">
 
           <div class="input-group p-2 shadow">
-            <input type="search" class="form-control" #txtTagInput (keyup.enter)="searchTag()">
+            <input id="searchinput" type="search" class="form-control" #txtTagInput (keyup.enter)="searchTag()" placeholder="Buscar ...">
             <span class="input-group-addon">
-              <button type="button" class="btn btn-primary" (click)="searchTag()">
+              <button type="button" class="btn btn-primary" (click)="searchTag()" title="Buscar">
                 <i class="bi bi-search"></i>
               </button>
             </span>

@@ -71,7 +71,7 @@ export class GifsService {
     this.httpClient.get<GiphyAPIResponse>(url, { params }).subscribe((response) => {
       if (response.meta.status == 200) {
         this.gifList = response.data;
-        console.log(`Respuesta de la API: ${response.pagination.total_count} gifs encontrados.  Se muestran ${response.pagination.count} gifs la página ${response.pagination.offset}.`);
+        //console.log(`Respuesta de la API: ${response.pagination.total_count} gifs encontrados.  Se muestran ${response.pagination.count} gifs la página ${response.pagination.offset}.`);
       }
       else {
         console.error(`Error en la respuesta de la API: ${response.meta.msg}`);
