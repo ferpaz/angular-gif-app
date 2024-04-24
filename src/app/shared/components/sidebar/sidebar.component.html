@@ -9,10 +9,10 @@
       <div *ngFor="let tag of tags; let i=index">
         <ng-container *ngIf="i == 0; then thenTemplate; else elseTemplate"></ng-container>
         <ng-template #thenTemplate>
-          <a class="list-group-item list-group-item-action active" (click)="search(tag)">{{ tag | titlecase }}</a>
+          <a role="button" class="list-group-item list-group-item-action active" (click)="search(tag)">{{ tag | titlecase }}</a>
         </ng-template>
         <ng-template #elseTemplate>
-          <a class="list-group-item list-group-item-action" (click)="search(tag)">{{ tag | titlecase }}</a>
+          <a role="button" class="list-group-item list-group-item-action" (click)="search(tag)">{{ tag | titlecase }}</a>
         </ng-template>
       </div>
     </div>
